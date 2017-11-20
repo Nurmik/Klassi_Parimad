@@ -36,7 +36,10 @@ name: 'Pinkie2', //char+
 
 userStats = user => `
 	<h1> ${user.name} </h1>
+	<p> Games owned: ${user.gamesowned} </p>
 	<p> Hours played: ${user.hoursplayed} </p>
+	<p> Profile created: ${user.profilecreated} </p>
+
 `
 
 document.querySelector('body').innerHTML = users.map(userStats)
