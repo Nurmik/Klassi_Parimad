@@ -1,36 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<style>
-
-	h1 {color:rgb(255,0,102);
-		padding-top: 40px;
-		}
-	body {background-color: black;
-		}
-	p {color:hotpink;}
-
-	.bordered {
-				}
-	script{
-			width: 200px;
-   			height: 100px;
-   			padding: 20px;
-    		border: 10px double rgb(255,0,102);
-
-	}
-
-	</style>
-
-
+    <head>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+        <style>
+            /* General HTML styles */
+        
+            body {
+                color: white;
+                background: #161d3a;
+                font-size: 24px;
+                font-family: 'Oxygen', sans-serif;
+                margin: 0 15vw;
+                padding: 32px;
+                line-height: 160%;
+            }
+            h2 {
+                margin: 0 0 10px 0;
+                line-height: 100%;
+            }
+            p {
+                margin: 0 0 5px 0;
+            }
+            
+            /* UserStats component styles */
+            .UserStats {
+                display: flex;
+                margin-bottom: 20px;
+                padding: 20px;
+                transition: all 500ms;
+                opacity: 0.8;
+            }
+            .UserStats:hover {
+                background: rgba(255,255,255,0.1);
+                transform: scale(1.1);
+                opacity: 1;
+                box-shadow: 0 0 20px rgba(0,0,0,0.75);
+            }
+            .UserStats img {
+                width: 150px;
+                height: 150px;
+                margin-right: 20px;
+                border: 2px solid rgba(255,255,255,0.25);
+                padding: 4px;
+                display: block;
+            }
+            .UserStats .online {
+                color: green;
+            }
+            .UserStats .offline {
+                color: gray;
+            }
+            /* UserDetails component styles */
+            .UserDetails {
+                color: rgba(255,255,255,0.5);
+                display: flex;
+            }
+            .UserDetails div:first-child {
+                margin-right: 10px;
+            }
+            .UserDetails b {
+                color: rgba(255,255,255,0.8);
+                padding-left: 10px;
+            }
+            /* Media queries */
+            @media (max-width: 500px) {
+                body {
+                    margin: 0;
+                }
+                .UserStats div:first-child {
+                    margin-bottom: 20px;
+                }
+                .UserStats img {
+                    width: 100%;
+                    height: auto;
+                }
+                .UserDetails {
+                    display: block;
+                }
+                .UserStats {
+                    display: block;
+                }
+            }
+    </style>
 </head>
 <body>
-<script src="index.js"></script>
-
+    <script src="index.js">
+    </script>
 </body>
 </html>
-
-<!--
-		<div class="bordered">
-	</div> 
-		
