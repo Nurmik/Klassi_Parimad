@@ -28,7 +28,7 @@ parseData = async data => {
 
 async function getData() {
     const key = '1bx-X8xb1m26_4ik0pQ1KLhO1fOaEUqeiLAd-AEultWk'
-    const res = await fetch(`https://docs.google.com/spreadsheets/d/1bx-X8xb1m26_4ik0pQ1KLhO1fOaEUqeiLAd-AEultWk/edit#gid=0`);
+    const res = await fetch(`https://spreadsheets.google.com/feeds/list/${key}/od6/public/values?alt=json`);
     const data = await res.json()
     return await parseData(data)
 }
